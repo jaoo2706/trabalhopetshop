@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Adoção de Pets</title>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Início</a> |
+    <a href="login.html">Login</a> |
+    <a href="registrar.html">Registro</a> |
+    <a href="admin.html">Administração</a>
+  </nav>
+  <hr>
+
+  <h1>Sistema de Adoção de Pets</h1>
+  <p>Bem-vindo! Veja abaixo os animais disponíveis para adoção.</p>
+
+  <p id="info-usuario"></p>
+
+  <h2>Informações do Sistema</h2>
+  <ul>
+    <li><strong>Animal mais novo disponível:</strong> <span id="info-mais-novo">---</span></li>
+    <li><strong>Última adoção:</strong> <span id="info-ultima-adocao">---</span></li>
+  </ul>
+
+  <h2>Animais Disponíveis</h2>
+  <table id="tabela-animais" border="1" cellpadding="5">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Espécie</th>
+        <th>Raça</th>
+        <th>Idade</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+  <script>
+    initHome();
+  </script>
+</body>
+</html>

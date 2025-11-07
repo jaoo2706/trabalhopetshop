@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Sistema de Adoção</title>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Início</a> |
+    <a href="login.html">Login</a> |
+    <a href="registrar.html">Registro</a> |
+    <a href="admin.html">Administração</a>
+  </nav>
+  <hr>
+
+  <h1>Área Administrativa</h1>
+
+  <section id="secao-login-admin">
+    <h2>Login do Administrador</h2>
+    <form id="form-admin-login">
+      <label>Usuário:</label><br>
+      <input type="text" name="usuario" required><br><br>
+
+      <label>Senha:</label><br>
+      <input type="password" name="senha" required><br><br>
+
+      <input type="submit" value="Entrar">
+    </form>
+    <p id="admin-status"></p>
+  </section>
+
+  <section id="admin-area" style="display:none;">
+    <h2>Painel Administrativo</h2>
+    <button id="btn-admin-logout">Sair do Admin</button>
+    <a href="relatorios.html">Ver Relatórios</a>
+    <hr>
+
+    <h3>Cadastrar Animal</h3>
+    <form id="form-animal">
+      <label>Nome:</label><br>
+      <input type="text" name="nome" required><br>
+
+      <label>Espécie:</label><br>
+      <input type="text" name="especie" required><br>
+
+      <label>Raça:</label><br>
+      <input type="text" name="raca" required><br>
+
+      <label>Idade:</label><br>
+      <input type="number" name="idade" min="0" required><br><br>
+
+      <input type="submit" value="Cadastrar Animal">
+    </form>
+
+    <h3>Animais Cadastrados</h3>
+    <table id="tabela-admin-animais" border="1" cellpadding="5">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Raça</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h3>Usuários Cadastrados</h3>
+    <table id="tabela-admin-usuarios" border="1" cellpadding="5">
+      <thead>
+        <tr>
+          <th>Usuário</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    initAdminPage();
+  </script>
+</body>
+</html>
